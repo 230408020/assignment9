@@ -1,3 +1,4 @@
+const RESET = { q: '', genre: '', read: '', sort: '', order: 'asc' };
 const GENRES = ['fiction', 'non-fiction', 'science', 'history', 'fantasy', 'other'];
 
 export default function Filters({ filters, onChange }) {
@@ -29,10 +30,11 @@ export default function Filters({ filters, onChange }) {
         <option value="year">Year</option>
         <option value="rating">Rating</option>
       </select>
-      <select value={filters.order} onChange={update('order')}>
+      <select value={filters.order} onChange={update('order')} disabled={!filters.sort}>
         <option value="asc">Ascending</option>
         <option value="desc">Descending</option>
       </select>
+      <button type="button" onClick={() => onChange(RESET)}>Reset</button>
     </div>
   );
 }
