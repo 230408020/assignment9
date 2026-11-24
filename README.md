@@ -48,6 +48,7 @@ Open http://localhost:5173. The server must be running.
 /assignment9
 ├─ server/
 │  ├─ server.js        # Express app: middleware, routes, 404 fallback, error handler
+│  ├─ .env.example     # Documents PORT and CLIENT_ORIGIN
 │  ├─ booksStore.js    # In-memory data; async functions, immutable updates only
 │  ├─ validate.js      # Hand-written validation for books, ids and query options
 │  ├─ package.json
