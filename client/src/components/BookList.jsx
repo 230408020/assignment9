@@ -9,12 +9,11 @@ function BookItem({ book, onEdit, onPatch, onDelete }) {
     setBusy(true);
     try {
       await action();
-    } catch (err) {
-      setError(err.message);
       setBusy(false);
-      return;
+    } catch (err) {
+      setError(err.message); // show the server's message under this book
+      setBusy(false);
     }
-    setBusy(false);
   }
 
   return (
