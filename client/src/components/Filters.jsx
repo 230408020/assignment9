@@ -30,7 +30,7 @@ export default function Filters({ filters, onChange }) {
         <option value="year">Year</option>
         <option value="rating">Rating</option>
       </select>
-      <select value={filters.order} onChange={update('order')} disabled={!filters.sort}>
+      <select value={filters.order} onChange={update('order')}>
         <option value="asc">Ascending</option>
         <option value="desc">Descending</option>
       </select>
